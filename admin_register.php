@@ -59,6 +59,20 @@
                     <label class="form-check-label">
                         <input class="form-check-input" type="radio" name="reg_gender" value="2"> Female
                     </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="reg_gender" value="3"> Apache Attack Helicopter
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="reg_rank" value="1" checked> Student
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="reg_rank" value="2"> Teacher
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="reg_rank" value="3"> Administrator
+                    </label>
                 </div>
                 <div class="form-group">
                     <label>Date of Birth</label>
@@ -68,77 +82,4 @@
                 </div>
                 <input class="btn btn-success pull-right" type="submit" value="Register"></input>
             </form>
-    </div>
-
-
-    <!-- wiuhoiheafp -->
-
-
-    <div class="container">
-        <div class="row">
-            <div class="panel panel-primary">
-                <div class="panel-body">
-                    <form method="POST" action="#" role="form">
-                        <div class="form-group">
-                            <h2>Create account</h2>
-                        </div>
-                        <div class="form-group">
-                            <label>Username</label>
-                            <input type="text" class="form-control" name="reg_username" maxlength="24" placeholder="Username">
-                        </div>
-
-
-
-                        <div class="form-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_gender" value="1" checked> Male
-                            </label>
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_gender" value="2"> Female
-                            </label>
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_gender" value="3"> Apache Attack Helicopter
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="signupEmail">First name</label>
-                            <input id="email" type="email" maxlength="50" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="signupEmail">Last name</label>
-                            <input id="email" type="email" maxlength="50" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label" for="signupEmail">Email</label>
-                            <input id="email" type="email" maxlength="50" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="signupPassword">Password</label>
-                            <input id="password" type="password" maxlength="25" class="form-control" placeholder="at least 6 characters" length="40">
-                        </div>
-                        <div class="form-group">
-                            <label>Date of Birth</label>
-                            <div class="form-group">
-                                <input class="form-control" type="date" value="" name="reg_dob">
-                            </div>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_rank" value="1" checked> Student
-                            </label>
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_rank" value="2"> Teacher
-                            </label>
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="reg_rank" value="3"> Administrator
-                            </label>
-                        </div>
-                        <div class="form-group ">
-                            <button id="submit " type="submit " class="btn btn-info btn-block ">Create Account</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
