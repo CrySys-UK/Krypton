@@ -67,3 +67,6 @@
 .nav>li>a:focus {
     background: none;
 }
+.input-group {
+    padding-bottom: 20px;
+}
