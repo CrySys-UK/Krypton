@@ -1,4 +1,5 @@
 <!-- Page Content -->
+
 <div class="container ">
 
     <!-- Page Heading -->
@@ -8,6 +9,15 @@
                     <small>Here's your content</small>
                 </h1>
         </div>
+    </div>
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+        </ul>
+
     </div>
     <!-- /.row -->
 
