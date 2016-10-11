@@ -23,17 +23,17 @@
 }
 .nav-tabs > li > a {
     border: none;
-    color: #666;
+    color: #2c3e50;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li > a:hover {
     border: none;
-    color: #4285F4 !important;
+    color: #2c3e50 !important;
     background: transparent;
 }
 .nav-tabs > li > a::after {
     content: "";
-    background: #4285F4;
+    background: #2c3e50;
     height: 2px;
     position: absolute;
     width: 100%;
@@ -47,7 +47,7 @@
     transform: scale(1);
 }
 .tab-nav > li > a::after {
-    background: #21527d none repeat scroll 0% 0%;
+    background: #2c3e50 none repeat scroll 0% 0%;
     color: #fff;
 }
 .tab-pane {
@@ -62,3 +62,8 @@
 }
 
 /* end of snippet */
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background: none;
+}
