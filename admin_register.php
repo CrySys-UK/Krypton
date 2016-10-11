@@ -1,7 +1,10 @@
 <?php 
 	include ('/header.php');
-	require_once ('/core/config/dbcon.php');
-	
+	require_once ('/core/init.php');
+if(!isset($_SESSION['user_id'])) {
+	header("Location: /login.php");
+}
+
 	$message = '';
 	
 	if (!empty($_POST['reg_username']) && !empty($_POST['reg_password']) && !empty($_POST['reg_password']) && !empty($_POST['reg_email']) && !empty($_POST['reg_first_name']) && !empty($_POST['reg_last_name']) && !empty($_POST['reg_gender']) && !empty($_POST['reg_dob']) && !empty($_POST['reg_rank'])):
@@ -19,9 +22,9 @@
 	$stmt->bindParam(':rank', $_POST['reg_rank']);
 	
 	if( $stmt->execute() ):
-		$message = '<div class="alert alert-success" role="alert"><b>Success!</b>, User has been added!</div>';
+		$message = '<div class="alert alert-success" role="alert"><b>Success!</b> User has been added!</div>';
 	else:
-		$message = '<div class="alert alert-danger" role="alert"><b>Error!</b>, User has not been added!</div>';
+		$message = '<div class="alert alert-danger" role="alert"><b>Error!</b> User has not been added!</div>';
 	endif;
 		
 	endif;

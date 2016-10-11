@@ -1,3 +1,9 @@
-<?php include 'header.php'; ?>
-    <?php include 'content.php'; ?>
-        <?php include 'footer.php'; ?>
+<?php
+	require '/core/init.php';
+if(!isset($_SESSION['user_id'])) {
+	header("Location: /login.php");
+}
+	include 'header.php';
+	include 'content.php';
+	include 'footer.php';
+?>
