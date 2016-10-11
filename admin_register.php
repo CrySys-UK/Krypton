@@ -1,10 +1,9 @@
 <?php 
 	include ('/header.php');
 	require_once ('/core/init.php');
-if(!isset($_SESSION['user_id'])) {
-	header("Location: /login.php");
-}
-
+	require_once ('/core/functions/fnc_chkLogged.php');
+	require_once ('/core/functions/fnc_chkAdmin.php');
+	
 	$message = '';
 	
 	if (!empty($_POST['reg_username']) && !empty($_POST['reg_password']) && !empty($_POST['reg_password']) && !empty($_POST['reg_email']) && !empty($_POST['reg_first_name']) && !empty($_POST['reg_last_name']) && !empty($_POST['reg_gender']) && !empty($_POST['reg_dob']) && !empty($_POST['reg_rank'])):
