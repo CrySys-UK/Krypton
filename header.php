@@ -34,6 +34,7 @@
                         <a href="# ">Admin Panel</a>
                     </li>
                 </ul>
+
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Hi Batman</a></li>
@@ -43,4 +44,17 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-default" role=" navigation ">
+        <div class="container">
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+
+            </div>
+        </div>
     </nav>
