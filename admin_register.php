@@ -86,15 +86,10 @@
                             <label>Username</label>
                             <input type="text" class="form-control" name="reg_username" maxlength="24" placeholder="Username">
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="signupName">First name</label>
-                            <input id="first_name" type="text" maxlength="50" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="signupName">Last name</label>
-                            <input id="last_name" type="text" maxlength="50" class="form-control">
-                        </div>
-                        <div class="form-check">
+
+
+
+                        <div class="form-inline">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="reg_gender" value="1" checked> Male
                             </label>
@@ -105,6 +100,15 @@
                                 <input class="form-check-input" type="radio" name="reg_gender" value="3"> Apache Attack Helicopter
                             </label>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label" for="signupEmail">First name</label>
+                            <input id="email" type="email" maxlength="50" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="signupEmail">Last name</label>
+                            <input id="email" type="email" maxlength="50" class="form-control">
+                        </div>
+
                         <div class="form-group">
                             <label class="control-label" for="signupEmail">Email</label>
                             <input id="email" type="email" maxlength="50" class="form-control">
@@ -129,18 +133,6 @@
                             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="reg_rank" value="3"> Administrator
                             </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="reg_rank" value=" 1 ">Student</label>
-                        </div>
-                        <div class="checkbox ">
-                            <label>
-                                <input type="checkbox " name="reg_rank" value="2">Teacher</label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="reg_rank" value=" 3 ">Admin</label>
                         </div>
                         <div class="form-group ">
                             <button id="submit " type="submit " class="btn btn-info btn-block ">Create Account</button>
