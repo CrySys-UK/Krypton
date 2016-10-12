@@ -36,15 +36,6 @@
                         <li>
                             <a href="<?php echo $server_url?>/upcomingpage.php">Upcoming</a>
                         </li>
-                        <li>
-                            <?php	if ($rank == 3) {
-							echo '<a href="# ">Admin Panel</a>';
-						} else {
-							//echo nothing
-						}
-						?>
-
-                        </li>
                     </ul>
                     <?php	if(isset($_SESSION['user_id'])) {
 				
