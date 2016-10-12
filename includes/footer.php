@@ -1,12 +1,13 @@
 <!-- Footer -->
-<footer>
-    <div class="row ">
-        <div class="col-lg-12 ">
-            <p>Copyright © CrySys 2016</p>
+<div class="container">
+    <footer>
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <p>Copyright © CrySys 2016</p>
+            </div>
         </div>
-    </div>
-    <!-- /.row -->
-</footer>
+        <!-- /.row -->
+    </footer>
 
 </div>
 <!-- /.container -->
