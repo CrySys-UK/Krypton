@@ -34,7 +34,7 @@
                             <a href="<?php echo $server_url?>/index.php">Home</a>
                         </li>
                         <li>
-                            <a href="<?php echo $server_url?>#">Upcoming</a>
+                            <a href="<?php echo $server_url?>/upcomingpage.php">Upcoming</a>
                         </li>
                         <li>
                             <?php	if ($rank == 3) {
