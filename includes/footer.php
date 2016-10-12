@@ -1,14 +1,8 @@
 <!-- Footer -->
-<div class="container">
-    <footer>
-        <div class="row ">
-            <div class="col-lg-12 ">
-                <p>Copyright © CrySys 2016</p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
-
+    <div class="container">
+        <p class="navbar-text pull-left">© 2016 - CrySys
+        </p>
+    </div>
 </div>
 <!-- /.container -->
 
