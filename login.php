@@ -1,8 +1,5 @@
 <?php 
-	include ('/header.php');
-	require ('/core/init.php');
-	require_once ('/core/config/dbcon.php');
-	
+	include ('/header.php');	
 	$message = '';	
 	
 if(isset($_SESSION['user_id'])) {

@@ -1,3 +1,7 @@
+<?php
+	require_once ('/core/init.php');
+	require_once ('/core/functions/fnc_chkUser.php');
+?>
 <head>
     <meta charset="utf-8">
     <title>Krypton</title>
@@ -26,21 +30,36 @@
             <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
                 <ul class="nav navbar-nav ">
                     <li>
-                        <a href="# ">News</a>
+                        <a href="/index.php">Home</a>
                     </li>
                     <li>
                         <a href="# ">Upcoming</a>
                     </li>
                     <li>
-                        <a href="# ">Admin Panel</a>
+						<?php	if ($rank == 3) {
+							echo '<a href="# ">Admin Panel</a>';
+						} else {
+							//echo nothing
+						}
+						?>
+              
                     </li>
                 </ul>
-
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a>Hi Batman</a></li>
-                    </ul>
-                </div>
+				<?php	if(isset($_SESSION['user_id'])) {
+				
+				?>
+				 <ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $username ?> <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#user_acc_settings.php">Account Settings</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="/logout.php">Logout</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				<?php
+				} else {}?>
             </div>
             <!-- /.navbar-collapse -->
         </div>
