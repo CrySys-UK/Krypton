@@ -4,6 +4,6 @@
 	
 	//Page
 	include '/includes/header.php';
-	include 'news.php';
+	include '/includes/news.php';
 	include '/includes/footer.php';
 ?>

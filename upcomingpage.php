@@ -4,6 +4,6 @@
 	
 	//Page
 	include '/includes/header.php';
-	include 'upcoming.php';
+	include '/includes/upcoming.php';
 	include '/includes/footer.php';
 ?>
