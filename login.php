@@ -3,7 +3,7 @@
 	$message = '';	
 	
 if(isset($_SESSION['user_id'])) {
-	header("Location: /index.php");
+	header("Location: $server_url/index.php");
 }
 	
 	if(!empty($_POST['log_username']) && !empty($_POST['log_password'])):

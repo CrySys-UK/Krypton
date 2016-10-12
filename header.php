@@ -24,16 +24,16 @@
                     <span class="icon-bar "></span>
                     <span class="icon-bar "></span>
                 </button>
-                <a class="navbar-brand " href="# ">Krypton</a>
+                <a class="navbar-brand " href="<?php $server_url?># ">Krypton</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
                 <ul class="nav navbar-nav ">
                     <li>
-                        <a href="/index.php">Home</a>
+                        <a href="<?php $server_url?>/index.php">Home</a>
                     </li>
                     <li>
-                        <a href="# ">Upcoming</a>
+                        <a href="<?php $server_url?>#">Upcoming</a>
                     </li>
                     <li>
 						<?php	if ($rank == 3) {
@@ -52,9 +52,9 @@
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $username ?> <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="/update_user_account.php">Account Settings</a></li>
+						<li><a href="<?php $server_url?>/update_user_account.php">Account Settings</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="/logout.php">Logout</a></li>
+						<li><a href="<?php $server_url?>/logout.php">Logout</a></li>
 					  </ul>
 					</li>
 				  </ul>

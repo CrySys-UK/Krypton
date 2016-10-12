@@ -1,10 +1,12 @@
 <?php
+	require_once ("/core/config/config.php");
+	
 	session_start();
 
 	session_unset();
 
 	session_destroy();
 
-header("Location: /login.php");
+header("Location: $server_ip/login.php");
 
 ?>
