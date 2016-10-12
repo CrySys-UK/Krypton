@@ -7,6 +7,6 @@
 
 	session_destroy();
 
-header("Location: $server_ip/login.php");
+header("Location: $server_url/login.php");
 
 ?>
