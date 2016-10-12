@@ -1,4 +1,5 @@
 <!-- Footer -->
+<div class="footer">
     <div class="container">
         <p class="navbar-text pull-left">© 2016 - CrySys
         </p>
