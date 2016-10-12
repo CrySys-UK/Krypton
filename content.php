@@ -1,3 +1,17 @@
+<?php
+	require('/core/functions/fnc_gtContent.php');
+	
+	
+	
+	$contentAdmin = new ContentAdmin;
+	$contentAdmins = $contentAdmin->fetch_all();
+
+	$contentTeacher = new ContentTeacher;
+	$contentTeachers = $contentTeacher->fetch_all();
+	
+	$contentStudent = new ContentStudent;
+	$contentStudents = $contentStudent->fetch_all();
+?>
 <!-- Page Content -->
 
 <div class="container ">
@@ -19,141 +33,37 @@
 	<div class="tab-content">
 	  <div id="home" class="tab-pane fade in active">
 		<div class="row ">
+		<?php foreach ($contentStudents as $contentStudent) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
+				<a href="<?php echo $server_url/$contentStudent['link']?>">
+					<img class="img-responsive " src="<?php echo $contentStudent['img']?>" alt=" " title="<?php echo $contentStudent['title']?>">
 				</a>
 			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
+		<?php } ?>
 		</div>
 	  </div>
+	  
 	  <div id="teacher" class="tab-pane fade">
 		<div class="row ">
+		<?php foreach ($contentTeachers as $contentTeacher) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
+				<a href="<?php echo $server_url/$contentTeacher['link']?>">
+					<img class="img-responsive " src="<?php echo $contentTeacher['img']?>" alt=" " title="<?php echo $contentTeacher['title']?>">
 				</a>
 			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-		</div>
-		<div class="row ">
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
+		<?php } ?>
 		</div>
 	  </div>
+	  
 	  <div id="admin" class="tab-pane fade">
 		<div class="row ">
+		<?php foreach ($contentAdmins as $contentAdmin) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
+				<a href="<?php echo $server_url/$contentAdmin['link']?>">
+					<img class="img-responsive " src="<?php echo $contentAdmin['img']?>" alt=" " title="<?php echo $contentAdmin['title']?>">
 				</a>
 			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-		</div>
-		<div class="row ">
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-		</div>
-		<div class="row ">
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-			<div class="col-md-3 portfolio-item ">
-				<a href="# ">
-					<img class="img-responsive " src="http://placehold.it/750x450 " alt=" ">
-				</a>
-			</div>
-		</div>
+		<?php } ?>
 	  </div>
 	</div>
     <!-- /.row -->
