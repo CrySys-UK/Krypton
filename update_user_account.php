@@ -85,5 +85,5 @@
 		<input class="btn btn-success pull-right" type="submit" value="Change Password"></input>
 	</form>
 <?php
-	include 'footer.php';
+	include '/includes/footer.php';
 ?>

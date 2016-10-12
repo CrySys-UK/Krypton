@@ -5,5 +5,5 @@
 	//Page
 	include '/includes/header.php';
 	include 'upcoming.php';
-	include 'footer.php';
+	include '/includes/footer.php';
 ?>
