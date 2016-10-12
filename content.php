@@ -1,7 +1,9 @@
 <?php
 	require('/core/functions/fnc_gtContent.php');
 	
-	
+	if($contentAdmin = 0 && $contentStudent = 0 && $contentTeacher = 0) {
+		
+	} else {
 	
 	$contentAdmin = new ContentAdmin;
 	$contentAdmins = $contentAdmin->fetch_all();
@@ -11,6 +13,7 @@
 	
 	$contentStudent = new ContentStudent;
 	$contentStudents = $contentStudent->fetch_all();
+	}
 ?>
 <!-- Page Content -->
 
