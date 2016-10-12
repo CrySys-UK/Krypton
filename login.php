@@ -21,7 +21,7 @@ if(isset($_SESSION['user_id'])) {
 		if(count($result) > 0 && password_verify($_POST['log_password'], $result['password'])) {
 			
 			$_SESSION['user_id'] = $result['id'];
-			header("Location: /");
+			header("Location: $server_url/");
 		} else {
 			
 		$message = '<div class="alert alert-danger" role="alert"><b>Error!</b> Those credentials do not match our records!</div>';
