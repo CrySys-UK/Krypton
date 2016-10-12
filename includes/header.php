@@ -58,3 +58,7 @@
             </div>
             <!-- /.container -->
         </nav>
+
+        <div class="alert alert-info">
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+        </div>

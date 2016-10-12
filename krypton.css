@@ -2,8 +2,8 @@
     padding-bottom: 2%;
 }
 .navbar {
-    margin-bottom: 2%;
     border-radius: 0px;
+    margin-bottom: 0px;
 }
 .navbar-collapse {
     padding-left: 0px;
@@ -78,4 +78,8 @@ footer {
 }
 .currentuser {
     text-transform: capitalize;
+}
+.alert {
+    border: 0px;
+    border-radius: 0px;
 }
