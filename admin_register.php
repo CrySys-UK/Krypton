@@ -1,5 +1,5 @@
 <?php 
-	include ('/header.php');
+	include ('/includes/header.php');
 	require_once ('/core/init.php');
 	require_once ('/core/functions/fnc_chkLogged.php');
 	require_once ('/core/functions/fnc_chkAdmin.php');
