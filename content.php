@@ -38,7 +38,7 @@
 		<div class="row ">
 		<?php foreach ($contentStudents as $contentStudent) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="<?php echo $server_url/$contentStudent['link']?>">
+				<a href="<?php echo $server_url?>/<?php echo $contentStudent['link']?>">
 					<img class="img-responsive " src="<?php echo $contentStudent['img']?>" alt=" " title="<?php echo $contentStudent['title']?>">
 				</a>
 			</div>
@@ -50,7 +50,7 @@
 		<div class="row ">
 		<?php foreach ($contentTeachers as $contentTeacher) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="<?php echo $server_url/$contentTeacher['link']?>">
+				<a href="<?php echo $server_url?>/<?php echo $contentTeacher['link']?>">
 					<img class="img-responsive " src="<?php echo $contentTeacher['img']?>" alt=" " title="<?php echo $contentTeacher['title']?>">
 				</a>
 			</div>
@@ -62,7 +62,7 @@
 		<div class="row ">
 		<?php foreach ($contentAdmins as $contentAdmin) { ?>
 			<div class="col-md-3 portfolio-item ">
-				<a href="<?php echo $server_url/$contentAdmin['link']?>">
+				<a href="<?php echo $server_url?>/<?php echo $contentAdmin['link']?>">
 					<img class="img-responsive " src="<?php echo $contentAdmin['img']?>" alt=" " title="<?php echo $contentAdmin['title']?>">
 				</a>
 			</div>
