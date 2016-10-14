@@ -1,6 +1,10 @@
 <?php
 	require_once ('/core/init.php');
 	require_once ('/core/functions/fnc_chkUser.php');
+	require_once ('/core/functions/fnc_gtAnnouncement.php');
+	
+	$getAnn = new GetAnnouncement;
+	$Ann = $getAnn->fetch_all();
 ?>
 
     <head>
@@ -58,7 +62,8 @@
             </div>
             <!-- /.container -->
         </nav>
-
+				<?php foreach ($Ann as $getAnn) { ?>
         <div class="alert alert-info">
-            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            <strong><?php echo $getAnn['bold'] ?></strong> <?php echo $getAnn['text']?>
         </div>
+		<?php } ?>
