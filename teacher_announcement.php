@@ -21,6 +21,7 @@
 	else:
 		$message = '<div class="alert alert-danger" role="alert"><b>Error!</b> Announcement has not been added!</div>';
 	endif;
+	
 	endif;
 ?>
 <div class="container">
