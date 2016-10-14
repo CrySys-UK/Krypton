@@ -1,7 +1,7 @@
 <?php
 	require('/core/init.php');
 	require('/core/functions/fnc_gtContent.php');
-	require('/core/functions/fnc_chkUser.php');
+	require_once ('/core/functions/fnc_chkAdmin.php');
 	require('/includes/header.php');
 	
 	if($contentAdmin = 0 && $contentStudent = 0 && $contentTeacher = 0) {
@@ -34,6 +34,7 @@
 		<li class="active"><a data-toggle="tab" href="#home">Student</a></li>
 		<li><a data-toggle="tab" href="#teacher">Teacher</a></li>
 		<li><a data-toggle="tab" href="#admin">Administrator</a></li>
+		<li class="nav pull-right"><a href="<?php echo $server_url?>/admin_grid_management_add.php"><i class="fa fa-plus" style="padding: 3px;" aria-hidden="true"></i></a></li>
 	</ul>
 
 	<div class="tab-content">

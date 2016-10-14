@@ -30,12 +30,13 @@
         </div>
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
-            <?php if (!isset($users) || $users['rank'] > 1) {?>
-                <li><a data-toggle="tab" href="#teacher">Teacher</a></li>
-                <?php } else {}?>
-                    <?php if (!isset($users) || $users['rank'] > 2) {?>
-                        <li><a data-toggle="tab" href="#admin">Administrator</a></li>
-                        <?php } else {}?>
+			<?php if (!isset($users) || $users['rank'] > 1) {?>
+			<li><a data-toggle="tab" href="#teacher">Teacher</a></li>
+			<?php } else {}?>
+			<?php if (!isset($users) || $users['rank'] > 2) {?>
+			<li><a data-toggle="tab" href="#admin">Administrator</a></li>
+			<?php } else {}?>
+			<li class="nav pull-right"><a href="<?php echo $server_url?>/admin_grid_management.php"><i class="fa fa-cogs" style="padding: 3px;" aria-hidden="true"></i></a></li>
         </ul>
 
         <div class="tab-content">
