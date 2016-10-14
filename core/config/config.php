@@ -10,5 +10,5 @@
 	$server_selDB = 'krypton'; //Select the database you want to connect to
 	
 	//Site Configuration
-	$server_url = 'http://localhost/krypton'; //Server URL example.com (DOES NOT END WITH /)
+	$server_url = 'http://151.231.232.80/krypton'; //Server URL example.com (DOES NOT END WITH /)
 ?>
