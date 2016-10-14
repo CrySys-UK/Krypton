@@ -35,8 +35,8 @@
 			<?php } else {}?>
 			<?php if (!isset($users) || $users['rank'] > 2) {?>
 			<li><a data-toggle="tab" href="#admin">Administrator</a></li>
-			<?php } else {}?>
 			<li class="nav pull-right"><a href="<?php echo $server_url?>/admin_grid_management.php"><i class="fa fa-cogs" style="padding: 3px;" aria-hidden="true"></i></a></li>
+			<?php } else {}?>
         </ul>
 
         <div class="tab-content">
@@ -44,7 +44,7 @@
                 <div class="row ">
                     <?php foreach ($contentStudents as $contentStudent) { ?>
                         <div class="col-md-3 portfolio-item ">
-                            <a href="<?php echo $server_url?>/<?php echo $contentStudent['link']?>">
+                            <a href="<?php echo $contentStudent['link']?>">
 					<img class="img-responsive gridimage " src="<?php echo $contentStudent['img']?>" alt=" " title="<?php echo $contentStudent['title']?>">
 				</a>
                             <span class="gridtext">
@@ -58,7 +58,7 @@
                 <div class="row ">
                     <?php foreach ($contentTeachers as $contentTeacher) { ?>
                         <div class="col-md-3 portfolio-item ">
-                            <a href="<?php echo $server_url?>/<?php echo $contentTeacher['link']?>">
+                            <a href="<?php echo $contentTeacher['link']?>">
 					<img class="img-responsive gridimage" src="<?php echo $contentTeacher['img']?>" alt=" " title="<?php echo $contentTeacher['title']?>">
 				</a>
                             <span class="gridtext">
@@ -73,7 +73,7 @@
                 <div class="row ">
                     <?php foreach ($contentAdmins as $contentAdmin) { ?>
                         <div class="col-md-3 portfolio-item ">
-                            <a href="<?php echo $server_url?>/<?php echo $contentAdmin['link']?>">
+                            <a href="<?php echo $contentAdmin['link']?>">
 					<img class="img-responsive gridimage" src="<?php echo $contentAdmin['img']?>" alt=" " title="<?php echo $contentAdmin['title']?>">
 				</a>
                             <span class="gridtext">
