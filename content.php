@@ -1,5 +1,6 @@
 <?php
 	require('/core/functions/fnc_gtContent.php');
+	require('/core/functions/fnc_chkUser.php');
 	
 	if($contentAdmin = 0 && $contentStudent = 0 && $contentTeacher = 0) {
 		
@@ -29,8 +30,12 @@
     </div>
 	<ul class="nav nav-tabs">
 	  <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
+	  <?php if (!isset($users) || $users['rank'] > 1) {?>
 	  <li><a data-toggle="tab" href="#teacher">Teacher</a></li>
+	  <?php } else {}?>
+	  <?php if (!isset($users) || $users['rank'] > 2) {?>
 	  <li><a data-toggle="tab" href="#admin">Administrator</a></li>
+	  <?php } else {}?>
 	</ul>
 
 	<div class="tab-content">
@@ -45,7 +50,6 @@
 		<?php } ?>
 		</div>
 	  </div>
-	  
 	  <div id="teacher" class="tab-pane fade">
 		<div class="row ">
 		<?php foreach ($contentTeachers as $contentTeacher) { ?>
@@ -54,7 +58,7 @@
 					<img class="img-responsive " src="<?php echo $contentTeacher['img']?>" alt=" " title="<?php echo $contentTeacher['title']?>">
 				</a>
 			</div>
-		<?php } ?>
+		<?php }?>
 		</div>
 	  </div>
 	  
