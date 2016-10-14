@@ -8,13 +8,12 @@
 	
 	if (!empty($_POST['ins_bold']) && !empty($_POST['ins_text'])) :
 	
-	$sql = "INSERT INTO users (bold, text, type, active, posted_by) VALUES (:bold, :text, :type, :active, :uid)";
+	$sql = "INSERT INTO announcements (bold, text, type, active, posted_by) VALUES (:bold, :text, :type, 1, :uid)";
 	$stmt = $dbConn->prepare($sql);
 	
 	$stmt->bindParam(':bold', $_POST['ins_bold']);
 	$stmt->bindParam(':text', $_POST['ins_text']);
 	$stmt->bindParam(':type', $_POST['ins_type']);
-	$stmt->bindParam(':active', 1);
 	$stmt->bindParam(':uid', $_SESSION['user_id']);
 	
 	if( $stmt->execute() ):
