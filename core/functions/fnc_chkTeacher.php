@@ -7,7 +7,7 @@
 	
 	$rank = $record->fetch(PDO::FETCH_ASSOC);
 	
-	if(!is_array($rank) || $rank['rank'] < 3) {
+	if(!is_array($rank) || $rank['rank'] < 2) {
 		header("Location: $server_url/");
 	}
-	?>
+?>

@@ -62,8 +62,8 @@
             </div>
             <!-- /.container -->
         </nav>
-				<?php foreach ($Ann as $getAnn) { ?>
-        <div class="alert alert-info">
+		<?php foreach ($Ann as $getAnn) { ?>
+        <div class="alert <?php echo $getAnn['type']?>">
             <strong><?php echo $getAnn['bold'] ?></strong> <?php echo $getAnn['text']?>
         </div>
 		<?php } ?>
