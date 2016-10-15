@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link href="krypton.css" rel="stylesheet">
+        <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
     </head>
 
     <body>

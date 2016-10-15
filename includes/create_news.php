@@ -1,25 +1,29 @@
 <div class="container">
     <div class="row">
-        <form role="form" id="contact-form" class="contact-form">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="newstitle" autocomplete="off" id="newstitle" placeholder="Title">
-                    </div>
-                </div>
+        <div class="col-sm-4">
+            <h2>Create a News Article</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="articletitle">Article Title</label>
+                <input type="text" class="form-control" id="articletitle">
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <textarea name="content" data-provide="markdown" rows="10"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <button type="submit" class="btn main-btn pull-right">Submit</button>
-                </div>
-            </div>
-        </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <textarea name="editor1"></textarea>
+            <script>
+                CKEDITOR.replace('editor1');
+
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="#" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-ok"></span> Submit</a>
+        </div>
     </div>
 </div>
