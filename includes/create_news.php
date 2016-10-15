@@ -23,7 +23,7 @@
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <a href="#" class="btn btn-primary btn-default"><span class="glyphicon glyphicon-ok"></span> Submit</a>
+            <a href="#" class="btn btn-primary btn-default articlesubmitbutton"><span class="glyphicon glyphicon-ok"></span> Submit</a>
         </div>
     </div>
 </div>
