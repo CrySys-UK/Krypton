@@ -10,9 +10,10 @@
             <h2>Krypton News</h2>
 			<?php foreach ($articles as $article) { ?>
 			
-            <h3><?php echo $article['title'] ?></h3>
-            <p><?php echo $article['body'] ?></p>
-            <br>
+            <h3><a href="/article.php?id=<?php echo $article['id'] ?>"><?php echo $article['title'] ?></a></h3>
+            <p><?php echo substr($article['body'], 0, 100)?>[...]</p>
+			<br>
+			<h5></h5>
             <hr/>
 			<?php } ?>
 		</div>
