@@ -1,9 +1,46 @@
 <?php
 	require '/core/init.php';
 	require_once ('/core/functions/fnc_chkLogged.php');
-	
-	//Page
+	require_once ('/core/functions/fnc_chkTeacher.php');
 	include '/includes/header.php';
-	include '/includes/create_news.php';
+	
+	$message = '';
+	
+	if(!empty($_POST['title']) && !empty($_POST['body'])) :
+		
+		$sql = "INSERT INTO news (title, body, author) VALUES (:title, :body, :author)";
+		$stmt = $dbConn->prepare($sql);
+		
+		$stmt->bindParam(':title', $_POST['title']);
+		$stmt->bindParam(':body', $_POST['body']);
+		$stmt->bindParam(':author', $_SESSION['user_id']);
+		
+	if( $stmt->execute() ):
+		$message = '<div class="alert alert-success" role="alert"><b>Success!</b> News has been added!</div>';
+	else:
+		$message = '<div class="alert alert-danger" role="alert"><b>Error!</b> News has not been added!</div>';
+	endif;
+	
+	endif;
+?>
+<div class="container">
+	<?php echo $message ?>
+	<form action="create_newspage.php" method="POST">
+		<div class="form-group">
+			<label>Title</label>
+			<input type="text" class="form-control" name="title" placeholder="Article Title">
+		</div>
+		<div class="form-group">
+			<textarea type="text" class="form-control" name="body"></textarea>
+		</div>
+		<input class="btn btn-success pull-right" type="submit" value="Add News Article"></input>
+	</form>
+</div>
+<script>
+	CKEDITOR.replace('body');
+
+</script>
+<?php
 	include '/includes/footer.php';
 ?>
+
