@@ -10,7 +10,7 @@
             <h2>Krypton News</h2>
 			<?php foreach ($articles as $article) { ?>
 			
-            <h3><a href="/article.php?id=<?php echo $article['id'] ?>"><?php echo $article['title'] ?></a></h3>
+            <h3><a href="<?php echo $server_url?>/article.php?id=<?php echo $article['id'] ?>"><?php echo $article['title'] ?></a></h3>
             <p><?php echo substr($article['body'], 0, 100)?>[...]</p>
 			<br>
 			<h5></h5>

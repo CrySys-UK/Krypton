@@ -1,6 +1,7 @@
 <?php
 	require '/core/init.php';
 	require_once ('/core/functions/fnc_chkLogged.php');
+	require_once ('/core/functions/fnc_chkUser.php');
 	require_once ('/core/functions/fnc_chkTeacher.php');
 	include '/includes/header.php';
 	
@@ -8,12 +9,14 @@
 	
 	if(!empty($_POST['title']) && !empty($_POST['body'])) :
 		
-		$sql = "INSERT INTO news (title, body, author) VALUES (:title, :body, :author)";
+		$sql = "INSERT INTO news (title, body, author, author_name, posted) VALUES (:title, :body, :author, :authname, :date)";
 		$stmt = $dbConn->prepare($sql);
 		
 		$stmt->bindParam(':title', $_POST['title']);
 		$stmt->bindParam(':body', $_POST['body']);
 		$stmt->bindParam(':author', $_SESSION['user_id']);
+		$stmt->bindParam(':authname', $_POST['author_name']);
+		$stmt->bindParam(':date', time());
 		
 	if( $stmt->execute() ):
 		$message = '<div class="alert alert-success" role="alert"><b>Success!</b> News has been added!</div>';
@@ -32,6 +35,10 @@
 		</div>
 		<div class="form-group">
 			<textarea type="text" class="form-control" name="body"></textarea>
+		</div>
+		<div class="form-group">
+			<label>Posting as</label>
+			<input type="text" class="form-control" readonly name="author_name" value="<?php echo $users['last_name']?>, <?php echo $users['first_name']?>">
 		</div>
 		<input class="btn btn-success pull-right" type="submit" value="Add News Article"></input>
 	</form>
