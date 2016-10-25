@@ -42,7 +42,7 @@
 			$message2 = '<div class="alert alert-danger" role="alert"><b>Error!</b> Grid Block has not been deleted!</div>';
 		endif;
 		} else {
-			$message2 = '<div class="alert alert-danger" role="alert"><b>Error!</b> Your old Password does not match our records!</div>';
+			$message2 = '<div class="alert alert-danger" role="alert"><b>Error!</b> Your Password does not match our records!</div>';
 		}
 	endif;
 ?>
