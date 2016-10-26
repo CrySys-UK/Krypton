@@ -1,7 +1,7 @@
 <?php
-	require_once ('/core/init.php');
-	require_once ('/core/functions/fnc_chkUser.php');
-	require_once ('/core/functions/fnc_gtAnnouncement.php');
+	require_once (__DIR__.'/core/init.php');
+	require_once (__DIR__.'/core/functions/fnc_chkUser.php');
+	require_once (__DIR__.'/core/functions/fnc_gtAnnouncement.php');
 	
 	$getAnn = new GetAnnouncement;
 	$Ann = $getAnn->fetch_all();
