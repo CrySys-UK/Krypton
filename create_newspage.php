@@ -1,9 +1,9 @@
 <?php
-	require '/core/init.php';
-	require_once ('/core/functions/fnc_chkLogged.php');
-	require_once ('/core/functions/fnc_chkUser.php');
-	require_once ('/core/functions/fnc_chkTeacher.php');
-	include '/includes/header.php';
+	require_once(__DIR__.'/core/init.php');
+	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
+	require_once (__DIR__.'/core/functions/fnc_chkUser.php');
+	require_once (__DIR__.'/core/functions/fnc_chkTeacher.php');
+	include (__DIR__.'/includes/header.php');
 	
 	$message = '';
 	

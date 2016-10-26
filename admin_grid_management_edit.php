@@ -1,8 +1,8 @@
 <?php
-	require('/core/init.php');
-	require('/core/functions/fnc_chkAdmin.php');
-	require('/core/functions/fnc_chkGrid.php');
-	require('/includes/header.php');
+	require(__DIR__.'/core/init.php');
+	require(__DIR__.'/core/functions/fnc_chkAdmin.php');
+	require(__DIR__.'/core/functions/fnc_chkGrid.php');
+	require(__DIR__.'/includes/header.php');
 	
 	$message = '';
 	$message2 = '';

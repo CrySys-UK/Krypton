@@ -1,7 +1,7 @@
 <?php
-	include ('/includes/header.php');
-	require_once ('/core/init.php');
-	require_once ('/core/functions/fnc_chkLogged.php');
+	include (__DIR__.'/includes/header.php');
+	require_once (__DIR__.'/core/init.php');
+	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
 
 	
 	$message = '';

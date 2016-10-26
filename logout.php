@@ -1,5 +1,5 @@
 <?php
-	require_once ("/core/config/config.php");
+	require_once (__DIR__.'/core/config/config.php');
 	
 	session_start();
 

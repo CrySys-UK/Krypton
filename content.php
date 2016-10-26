@@ -1,6 +1,6 @@
 <?php
-	require('/core/functions/fnc_gtContent.php');
-	require('/core/functions/fnc_chkUser.php');
+	require_once(__DIR__.'/core/functions/fnc_gtContent.php');
+	require_once(__DIR__.'/core/functions/fnc_chkUser.php');
 	
 	if($contentAdmin = 0 && $contentStudent = 0 && $contentTeacher = 0) {
 		

@@ -1,8 +1,8 @@
 <?php
-	require('/core/init.php');
-	require('/core/functions/fnc_gtContent.php');
-	require_once ('/core/functions/fnc_chkAdmin.php');
-	require('/includes/header.php');
+	require(__DIR__.'/core/init.php');
+	require(__DIR__.'/core/functions/fnc_gtContent.php');
+	require_once (__DIR__.'/core/functions/fnc_chkAdmin.php');
+	require(__DIR__.'/includes/header.php');
 	
 	if($contentAdmin = 0 && $contentStudent = 0 && $contentTeacher = 0) {
 		
