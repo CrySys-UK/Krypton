@@ -1,5 +1,5 @@
 <?php 
-	require_once (__DIR__.'/core/functions/fnc_gtUsers.php');
+	require_once ('/core/functions/fnc_gtUsers.php');
 	
 	$user = new ListUser;
 	$users = $user->fetch_all();

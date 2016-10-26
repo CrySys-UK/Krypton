@@ -1,5 +1,5 @@
 <?php 
-	require_once (__DIR__.'/core/functions/fnc_gtNews.php');
+	require_once ('/core/functions/fnc_gtNews.php');
 	
 	$article = new Article;
 	$articles = $article->fetch_all();
