@@ -3,7 +3,7 @@
 	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
 	require_once (__DIR__.'/core/functions/fnc_chkUser.php');
 	require_once (__DIR__.'/core/functions/fnc_chkTeacher.php');
-	include (__DIR__.'/includes/header.php');
+	include (__DIR__.'/header.php');
 	
 	$message = '';
 	
