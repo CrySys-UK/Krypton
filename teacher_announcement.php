@@ -2,7 +2,7 @@
 	require (__DIR__.'/core/init.php');
 	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
 	require_once (__DIR__.'/core/functions/fnc_chkTeacher.php');
-	include (__DIR__.'/includes/header.php');
+	include (__DIR__.'/header.php');
 	
 	$message = '';
 	
@@ -24,38 +24,34 @@
 	
 	endif;
 ?>
-<div class="container">
-	<?php echo $message ?>
-	<form action="teacher_announcement.php" method="POST">
-		<div class="form-group">
-			<label>Bold Text</label>
-			<input type="text" class="form-control" name="ins_bold" maxlength="24" placeholder="Urgent Announement!">
-		</div>
-		<div class="form-group">
-			<label>Message</label>
-			<input type="text" class="form-control" name="ins_text" placeholder="Can all personel please.....">
-		</div>
-		<div class="form-check">
-		  <label class="form-check-label">
-			<input class="form-check-input" type="radio" name="ins_type" value="alert-success" checked>
-			Success
-		  </label>
-		  <label class="form-check-label">
-			<input class="form-check-input" type="radio" name="ins_type" value="alert-danger">
-			Danger
-		  </label>
-		  <label class="form-check-label">
-			<input class="form-check-input" type="radio" name="ins_type" value="alert-info">
-			Info
-		  </label>
-		  <label class="form-check-label">
-			<input class="form-check-input" type="radio" name="ins_type" value="alert-warning">
-			Warning
-		  </label>
-		</div>
-		<input class="btn btn-success pull-right" type="submit" value="Register"></input>
-	</form>
-</div>
-<?php
-	include '/includes/footer.php';
+    <div class="container">
+        <?php echo $message ?>
+            <form action="teacher_announcement.php" method="POST">
+                <div class="form-group">
+                    <label>Bold Text</label>
+                    <input type="text" class="form-control" name="ins_bold" maxlength="24" placeholder="Urgent Announement!">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <input type="text" class="form-control" name="ins_text" placeholder="Can all personel please.....">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="ins_type" value="alert-success" checked> Success
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="ins_type" value="alert-danger"> Danger
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="ins_type" value="alert-info"> Info
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="ins_type" value="alert-warning"> Warning
+                    </label>
+                </div>
+                <input class="btn btn-success pull-right" type="submit" value="Register"></input>
+            </form>
+    </div>
+    <?php
+	include (__DIR__.'/footer.php');
 ?>

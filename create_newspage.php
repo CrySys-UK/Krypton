@@ -26,27 +26,27 @@
 	
 	endif;
 ?>
-<div class="container">
-	<?php echo $message ?>
-	<form action="create_newspage.php" method="POST">
-		<div class="form-group">
-			<label>Title</label>
-			<input type="text" class="form-control" name="title" placeholder="Article Title">
-		</div>
-		<div class="form-group">
-			<textarea type="text" class="form-control" name="body"></textarea>
-		</div>
-		<div class="form-group">
-			<label>Posting as</label>
-			<input type="text" class="form-control" readonly name="author_name" value="<?php echo $users['last_name']?>, <?php echo $users['first_name']?>">
-		</div>
-		<input class="btn btn-success pull-right" type="submit" value="Add News Article"></input>
-	</form>
-</div>
-<script>
-	CKEDITOR.replace('body');
+    <div class="container">
+        <?php echo $message ?>
+            <form action="create_newspage.php" method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="Article Title">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" name="body"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Posting as</label>
+                    <input type="text" class="form-control" readonly name="author_name" value="<?php echo $users['last_name']?>, <?php echo $users['first_name']?>">
+                </div>
+                <input class="btn btn-success pull-right" type="submit" value="Add News Article"></input>
+            </form>
+    </div>
+    <script>
+        CKEDITOR.replace('body');
 
-</script>
-<?php
-	include '/includes/footer.php';
+    </script>
+    <?php
+	include (__DIR__.'/footer.php');
 ?>

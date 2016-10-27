@@ -2,7 +2,7 @@
 	require (__DIR__.'/core/init.php');
 	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
 	require_once (__DIR__.'/core/functions/fnc_chkAdmin.php');
-	include (__DIR__.'/includes/header.php');
+	include (__DIR__.'/header.php');
 	
 	$message = '';
 	
@@ -26,38 +26,35 @@
 	
 	endif;
 ?>
-<div class="container">
-	<?php echo $message ?>
-	<form action="admin_grid_management_add.php" method="POST">
-		<div class="form-group">
-			<label>Title</label>
-			<input type="text" class="form-control" name="title" placeholder="Hover Title">
-		</div>
-		<div class="form-group">
-			<label>Link</label>
-			<input type="text" class="form-control" name="link" placeholder="Place your URL (REQUIRES HTTP://WWW)">
-		</div>
-		<div class="form-group">
-			<label>Image</label>
-			<input type="text" class="form-control" name="image" placeholder="Image URL">
-		</div>
-		<div class="form-check">
-		  <label class="form-check-label">
-			<input class="form-check-input" type="checkbox" name="admin_access" value="1" checked>
-			Administrator Access
-		  </label>
-		  <label class="form-check-label">
-			<input class="form-check-input" type="checkbox" name="teacher_access" value="1">
-			Teacher Access
-		  </label>
-		  <label class="form-check-label">
-			<input class="form-check-input" type="checkbox" name="student_access" value="1">
-			Student Access
-		  </label>
-		</div>
-		<input class="btn btn-success pull-right" type="submit" value="Add Grid Block"></input>
-	</form>
-</div>
-<?php 	
-	include ('/includes/footer.php');
+    <div class="container">
+        <?php echo $message ?>
+            <form action="admin_grid_management_add.php" method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="Hover Title">
+                </div>
+                <div class="form-group">
+                    <label>Link</label>
+                    <input type="text" class="form-control" name="link" placeholder="Place your URL (REQUIRES HTTP://WWW)">
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input type="text" class="form-control" name="image" placeholder="Image URL">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="admin_access" value="1" checked> Administrator Access
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="teacher_access" value="1"> Teacher Access
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="student_access" value="1"> Student Access
+                    </label>
+                </div>
+                <input class="btn btn-success pull-right" type="submit" value="Add Grid Block"></input>
+            </form>
+    </div>
+    <?php 	
+	include (__DIR__.'/footer.php');
 ?>

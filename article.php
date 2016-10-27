@@ -1,8 +1,8 @@
 <?php
-	require '/core/init.php';
+	require (__DIR__.'/core/init.php');
 	require_once ('/core/functions/fnc_chkLogged.php');
 	require_once ('/core/functions/fnc_gtNews.php');
-	include '/includes/header.php';
+	include (__DIR__.'/header.php');
 	
 	$article = new Article;
 	
@@ -19,7 +19,7 @@
                 <span><strong>Author:</strong>  <?php echo $art['author_name'] ?> | <strong><small>Date Published:</strong> <?php echo date('jS F', $art['posted']); ?></small></span>
             </div>
         </div>
-		<br>
+        <br>
         <div class="row">
             <div class="col-md-10">
                 <?php echo $art['body'] ?>
@@ -28,5 +28,5 @@
     </div>
 
     <?php
-	include '/includes/footer.php';
+	include (__DIR__.'/footer.php');
 ?>

@@ -4,7 +4,7 @@
 	require_once (__DIR__.'/core/functions/fnc_chkUser.php');
 	require_once (__DIR__.'/core/functions/fnc_chkTeacher.php');
 	require_once (__DIR__.'/core/functions/fnc_chkNews.php');
-	include (__DIR__.'/includes/header.php');
+	include (__DIR__.'/header.php');
 	
 	$message = '';
 	
@@ -25,22 +25,23 @@
 	
 	endif;
 ?>
-<div class="container">
-	<?php echo $message ?>
-	<form action="edit_newspage.php?id=<?php echo $_GET['id']?>" method="POST">
-		<div class="form-group">
-			<label>Title</label>
-			<input type="text" class="form-control" name="title" value="<?php echo $title?>" placeholder="Article Title">
-		</div>
-		<div class="form-group">
-			<textarea type="text" class="form-control" name="body"></textarea>
-		</div>
-		<input class="btn btn-success pull-right" type="submit" value="Update News Article"></input>
-	</form>
-</div>
-<script>
-	CKEDITOR.replace('body').setData(value);
-</script>
-<?php
-	include '/includes/footer.php';
+    <div class="container">
+        <?php echo $message ?>
+            <form action="edit_newspage.php?id=<?php echo $_GET['id']?>" method="POST">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" value="<?php echo $title?>" placeholder="Article Title">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" name="body"></textarea>
+                </div>
+                <input class="btn btn-success pull-right" type="submit" value="Update News Article"></input>
+            </form>
+    </div>
+    <script>
+        CKEDITOR.replace('body').setData(value);
+
+    </script>
+    <?php
+	include (__DIR__.'/footer.php');
 ?>
