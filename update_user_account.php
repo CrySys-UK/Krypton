@@ -1,5 +1,5 @@
 <?php
-	include (__DIR__.'/includes/header.php');
+	include (__DIR__.'/header.php');
 	require_once (__DIR__.'/core/init.php');
 	require_once (__DIR__.'/core/functions/fnc_chkLogged.php');
 
