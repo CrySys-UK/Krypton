@@ -38,11 +38,11 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle currentuser" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								{username}<span class="caret"></span></a>
+								{USERNAME}<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{URL}/update_user_account.php">Account Settings</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="{URL}/logout.php">Logout</a></li>
+                                    <li><a href="{URL}/index.php?page=logout">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -51,4 +51,75 @@
             </div>
             <!-- /.container -->
         </nav>
+		    <div class="container ">
+
+        <!-- Page Heading -->
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <h1 class="page-header ">Welcome
+                    <small>Here's your content {USERNAME}</small>
+                </h1>
+            </div>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Student</a></li>
+			<li><a data-toggle="tab" href="#teacher">Teacher</a></li>
+			<li><a data-toggle="tab" href="#admin">Administrator</a></li>
+			<li class="nav pull-right"><a href="/admin_grid_management.php"><i class="fa fa-cogs" style="padding: 3px;" aria-hidden="true"></i></a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="row ">
+                        <div class="col-md-3 portfolio-item ">
+					<img class="img-responsive gridimage " src="{GRID_IMG}" alt=" " title="">
+				</a>
+                            <span class="gridtext">
+                            </span>
+                        </div>
+                </div>
+            </div>
+            <div id="teacher" class="tab-pane fade">
+                <div class="row ">
+                        <div class="col-md-3 portfolio-item ">
+                            <a href="{GRID_URL}">
+					<img class="img-responsive gridimage" src="" alt=" " title="{GRID:TITLE}">
+				</a>
+                            <span class="gridtext">
+                            </span>
+                        </div>
+                </div>
+            </div>
+
+            <div id="admin" class="tab-pane fade">
+                <div class="row ">
+                        <div class="col-md-3 portfolio-item ">
+                            <a href="">
+					<img class="img-responsive gridimage" src="ss" alt=" " title="">
+				</a>
+                            <span class="gridtext">
+                                {GRID:TITLE}
+                            </span>
+                        </div>
+                </div>
+            </div>
+			<!-- Footer -->
+			<div class="footer">
+				<div class="container">
+					<p class="navbar-text pull-left">© 2016 - CrySys
+					</p>
+				</div>
+			</div>
+			<!-- /.container -->
+
+			<!-- jQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+			<!-- Bootstrap Core JavaScript -->
+			<script src="{URL}/template/{TPL}/js/bootstrap.min.js "></script>
+
+
+
+
+			</body>
 </HTML>
