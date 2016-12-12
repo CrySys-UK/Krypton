@@ -57,7 +57,7 @@
         <div class="row ">
             <div class="col-lg-12 ">
                 <h1 class="page-header ">Welcome
-                    <small>Here's your content {USERNAME}</small>
+                    <small>Here's your content %GRID%</small>
                 </h1>
             </div>
         </div>

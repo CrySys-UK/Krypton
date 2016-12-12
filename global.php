@@ -13,7 +13,6 @@ define('M', '/manage');
 	require_once C . '/template.class.php';
 	require_once C . '/mysql.class.php';
 	require_once C . '/users.class.php';
-	require_once C . '/grid.class.php';
 
 	//Template System Information
 	$tplDes = $_CONFIG['site']['template'];
@@ -21,7 +20,7 @@ define('M', '/manage');
 	define ('TEMPLATE_PATH', 'template/'.$tplDes);
 	define ('TEMPLATE_PAGE', '/'.$tplPg.'.php');
 	//Raw Addons
-	define('RAW_PATH', 'template/'.$tplDes);
+	define('RAW_PATH', 'template/'.$tplDes.'/raw/');
 	//Begin Activating the Engine
 	use Krypton as Kry;
 
@@ -30,8 +29,6 @@ define('M', '/manage');
 	$user = new Kry\User();
 
 	$mysql = new Kry\MySQL();
-
-	$grid = new Kry\Grid();
 
 	//Other Activating
 	session_start();

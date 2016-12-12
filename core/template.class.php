@@ -4,7 +4,7 @@
 	class Template
 	{
 		private $assignedValues = array();
-		private $partialBuffer;
+		private $rawBuffer;
 		private $tpl;
 		//Construct Function (First steps, checks if exists)
 		function __construct($_path = '')
@@ -25,6 +25,25 @@
 			}
 
 		}
+		//Add Template Pieces
+		//(Basically import raw PHP	// I'm confident there is a bettter way but for now #YOLO)
+		function rawObject($_searchString, $_path)
+		{
+			if(!empty($_searchString))
+			{
+				if(file_exists($_path))
+				{
+					ob_start();
+					include($_path);
+					$this->rawBuffer .= ob_get_contents();
+					ob_end_clean();
+
+					$this->tpl = str_ireplace('%'.strtoupper($_searchString).'%', $this->rawBuffer, $this->tpl);
+					$this->rawBuffer = '';
+				}
+			}
+		}
+
 		//The assigned Parameters {url} etc.
 		function SetParams()
 		{
@@ -36,6 +55,10 @@
 			$this->Assign('username', $user->getUserInfo('username', $_SESSION['user']['id'])); //{USERNAME} prints the username
 			}
 		}
+		function rawParams()
+		{
+			$this->rawObject('grid', RAW_PATH.'/grid.php', array());
+		}
 		//This function takes the set params and turns them into an actual function
 		function Assign($_searchString, $_replaceString)
 		{
@@ -44,8 +67,6 @@
 				$this->assignedValues[strtoupper($_searchString)] = $_replaceString;
 			}
 		}
-		//Add Template Pieces (Basically import raw PHP // I'm confident there is a bettter way but for now #YOLO)
-		
 		//Combines everything and echo's the template
 		function Show()
 		{
